@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', serif;
+}
+
+.full-bg{
+    background-image: url("../assets/img/bg_main.jpg");
+    background-size: 100% auto;
+    background-position: 0 0;
+}
+a {
+    color: black;
+    text-decoration: underline;
+}
+header{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header > a, footer > a.logo, .contact-info > a  {
+    color: #000;
+    text-align: right;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 48px;
+}
+a.logo{
+    position: relative;
+}
+a.logo:after {
+    content: 'eu';
+    position: absolute;
+    right: -15px;
+    bottom: -2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #8ED74F;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+a.phoneTocall:before{
+    content: '';
+    display: flex;
+    width: 23px;
+    height: 24px;
+    background-image: url("../assets/icons/phone.svg");
+    margin-right: 4px;
+}
+main{
+    padding-top: 112px;
+}
+h1 > span {
+    font-weight: bold;
+}
+.info-wrapper{
+    display: flex;
+}
+.form-wrapper{
+    padding-top: 80px;
+    max-width: 320px;
+}
+.phone-line{
+    display: flex;
+    flex-direction: column;
+}
+.phone-line > label{
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+}
+#basic-addon1{
+    width: 36px;
+    /*height: 16px;*/
+    background-image: url('../assets/icons/phone.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#phone{
+    height: 60px;
+    padding: 8px;
+}
+#phone:before{
+    position: relative;
+    content: '';
+    display: flex;
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/icons/phone.svg');
+    text-align: center;
+    margin-right: -26px;
+    position: relative;
+    z-index: 1;
+    float: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+.btn-success {
+    width: 320px;
+    height: 70px;
+    position: relative;
+    background-color: #2CC9B8;
+    margin-bottom: 120px;
+}
+button:after{
+    content: '';
+    width: 24px;
+    height: 33px;
+    top: 20px;
+    right: 28px;
+    position: absolute;
+    background-image: url('../assets/icons/touch.svg');
+}
+
+
+.info-wrapper > div, .info-wrapper > picture{
+    width: 50%;
+}
+picture.img-wrapper{
+    position: relative;
+}
+
+.img-wrapper > img{
+    z-index: 2;
+    height: 388px;
+}
+span.green-circle{
+    position: absolute;
+    left: 5px;
+    top: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #8ED74F;
+    width: 153px;
+    height: 153px;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+.black-section, .green-section{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
+.green-section{
+    background-color: #8ED74F;
+}
+.black-section{
+    background-color: #27242D;
+    text-decoration: underline;
+}
+
+.second-section{
+    padding: 40px 0 100px;
+}
+
+.second-section h1{
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.info-icon{
+    display: flex;
+    width: 97px;
+    height: 97px;
+    background-color: #000;
+    border-radius: 50%;
+    background-image: url('../assets/icons/green_list.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 32px;
+}
+.sell-wrapper{
+    justify-content: space-between;
+}
+.info-card{
+    max-width: 210px;
+}
+.info-title{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+.info-subscription{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.btn-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+.footer{
+    justify-content: space-between;
+}
+
+.footer > .logo{
+    margin: unset;
+    align-self: flex-start;
+}
+.contact-info .phoneTocall{
+    margin: unset;
+}
+.social-icons{
+    margin: 20px 0 30px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+.social-icon{
+    display: flex;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.facebook{
+    background-image: url("../assets/icons/icons8-facebook.svg");
+}
+
+.instagram{
+    background-image: url("../assets/icons/icons8-instagram.svg");
+}
+.telegram{
+    background-image: url("../assets/icons/icons8-telegram.svg");
+}
+.footerTextInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 45px;
+}
+
+.linkWrapper{
+    line-height: 45px;
+}
+
+
+
