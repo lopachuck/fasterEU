@@ -31,7 +31,7 @@ header{
     }
 }
 
-header > a, footer > a.logo, .contact-info > a  {
+header > a, footer a.logo, .contact-info > a  {
     color: #000;
     text-align: right;
     font-size: 18px;
@@ -42,7 +42,6 @@ header > a, footer > a.logo, .contact-info > a  {
     text-decoration: none;
     display: flex;
     align-items: center;
-    /*margin-top: 48px;*/
 }
 a.logo{
     position: relative;
@@ -98,7 +97,6 @@ h1.title > span {
     flex-direction: column;
     width: 100%;
     position: relative;
-    /*flex-wrap: wrap;*/
 }
 
 .img-container{
@@ -139,7 +137,6 @@ h1.title > span {
 }
 #basic-addon1{
     width: 36px;
-    /*height: 16px;*/
     background-image: url('../assets/icons/phone.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -228,7 +225,8 @@ span.green-circle{
 }
 .black-section, .green-section{
     display: flex;
-    gap: 20px;
+    width: 50%;
+    gap: 30px;
     align-items: center;
     justify-content: center;
     color: #FFF;
@@ -237,17 +235,86 @@ span.green-circle{
     font-style: normal;
     font-weight: 500;
     line-height: 40px;
+    @media screen and (max-width: 375px) {
+        height: 285px;
+        gap: unset;
+    }
 }
 .green-section{
     background-color: #8ED74F;
+    @media screen and (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.car_on_green{
+    @media screen and (max-width: 375px) {
+        display: flex;
+        width: 265px;
+    }
+}
+
+.car_on_green img {
+    width: 100%;
+    @media screen and (max-width: 375px){
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+}
+.car_on_green span {
+    @media screen and (max-width: 375px){
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+
 }
 .black-section{
     background-color: #27242D;
     text-decoration: underline;
+    @media screen and (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.black-section picture{
+    @media screen and (max-width: 375px) {
+        order: 1;
+        width: 100%;
+    }
+
+}
+.black-section picture img {
+    margin-left: 50px;
+    margin-top: -95px;
+}
+.black-section span{
+    @media screen and (max-width: 375px) {
+        order: 2;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-top: -30px;
+    }
 }
 
 .second-section{
     padding: 40px 0 100px;
+    @media screen and (max-width: 375px){
+        width: 100%;
+        padding: 60px 20px 120px;
+    }
+}
+.second-section .row {
+    margin: unset;
+}
+
+.second-section .row h1 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    padding-bottom: 60px;
 }
 
 .second-section h1{
@@ -268,12 +335,32 @@ span.green-circle{
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 32px;
+    @media screen and (max-width: 375px) {
+        width: 30%;
+    }
+}
+.info-text {
+    @media screen and (max-width: 375px) {
+        width: 68%;
+        padding-left: 25px;
+    }
 }
 .sell-wrapper{
     justify-content: space-between;
+    @media screen and (max-width: 375px) {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 .info-card{
     max-width: 210px;
+    @media screen and (max-width: 375px) {
+        max-width: unset;
+        padding: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
 }
 .info-title{
     font-size: 18px;
@@ -295,17 +382,34 @@ span.green-circle{
     justify-content: center;
     align-items: center;
     padding-top: 200px;
+    @media screen and (max-width: 375px) {
+        padding-top: 50px;
+    }
+}
+
+.btn-wrapper .btn_no_margin {
+    margin: unset;
 }
 .footer{
     justify-content: space-between;
+    @media screen and (max-width: 375px) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-.footer > .logo{
+.footer .logo{
     margin: unset;
     align-self: flex-start;
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
 }
 .contact-info .phoneTocall{
     margin: unset;
+    @media screen and (max-width: 375px) {
+        margin: 0 auto;
+    }
 }
 .social-icons{
     margin: 20px 0 30px;
@@ -320,6 +424,9 @@ span.green-circle{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
 }
 .facebook{
     background-image: url("../assets/icons/icons8-facebook.svg");
@@ -337,9 +444,18 @@ span.green-circle{
     align-items: center;
     line-height: 45px;
 }
+.footerTextInfo > span {
+    @media screen and (max-width: 375px){
+        display: none;
+    }
+}
 
 .linkWrapper{
     line-height: 45px;
+    @media screen and (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
