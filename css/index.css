@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'Montserrat', serif;
 }
+html, body{
+    @media screen and (max-width: 375px){
+        overflow-x: hidden;
+    }
+}
 
 .full-bg{
     background-image: url("../assets/img/bg_main.jpg");
@@ -19,8 +24,11 @@ header{
     padding: 0;
     display: flex;
     max-width: 1250px;
-    width: 100%;
     margin: 0 auto;
+    padding-top: 48px;
+    @media only screen and (max-width: 375px) {
+        padding: 25px 25px 20px 30px;
+    }
 }
 
 header > a, footer > a.logo, .contact-info > a  {
@@ -34,7 +42,7 @@ header > a, footer > a.logo, .contact-info > a  {
     text-decoration: none;
     display: flex;
     align-items: center;
-    margin-top: 48px;
+    /*margin-top: 48px;*/
 }
 a.logo{
     position: relative;
@@ -54,8 +62,12 @@ a.logo:after {
     align-items: center;
 
 }
-a.phoneTocall:before{
-    content: '';
+a.phoneTocall span {
+    @media screen and (max-width: 375px){
+        display: none;
+    }
+}
+a.phoneTocall .phone_icon{
     display: flex;
     width: 23px;
     height: 24px;
@@ -64,16 +76,54 @@ a.phoneTocall:before{
 }
 main{
     padding-top: 112px;
+    @media screen and (max-width: 375px){
+        padding-top: 60px;
+    }
 }
-h1 > span {
+.container.first{
+    padding: 0;
+}
+h1.title {
+    @media screen and (max-width: 375px) {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 40px;
+    }
+}
+h1.title > span {
     font-weight: bold;
 }
 .info-wrapper{
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    /*flex-wrap: wrap;*/
+}
+
+.img-container{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    @media screen and (max-width: 375px) {
+        position: unset;
+    }
+}
+
+.info-wrapper_child{
+    width: 50%;
+    @media screen and (max-width: 375px) {
+        width: 100%;
+        padding: 0 28px;
+    }
 }
 .form-wrapper{
     padding-top: 80px;
     max-width: 320px;
+    @media screen and (max-width: 375px) {
+        flex-direction: column;
+        max-width: 100%;
+    }
 }
 .phone-line{
     display: flex;
@@ -107,7 +157,6 @@ h1 > span {
     background-image: url('../assets/icons/phone.svg');
     text-align: center;
     margin-right: -26px;
-    position: relative;
     z-index: 1;
     float: left;
 }
@@ -133,17 +182,20 @@ button:after{
     background-image: url('../assets/icons/touch.svg');
 }
 
-
-.info-wrapper > div, .info-wrapper > picture{
-    width: 50%;
-}
 picture.img-wrapper{
     position: relative;
+    @media screen and (max-width: 375px) {
+        padding: unset;
+    }
 }
 
 .img-wrapper > img{
+
     z-index: 2;
     height: 388px;
+    @media screen and (max-width: 375px) {
+        height: 200px;
+    }
 }
 span.green-circle{
     position: absolute;
@@ -164,6 +216,15 @@ span.green-circle{
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
+    @media screen and (max-width: 375px){
+        width: 83px;
+        height: 83px;
+        top: 0;
+        left: 20px;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 20px;
+    }
 }
 .black-section, .green-section{
     display: flex;
