@@ -10,60 +10,58 @@
 </head>
 <body>
     <div class="d-flex flex-column w-100 full-bg">
-        <header class="header w-100 d-flex justify-content-between">
+        <header class="header">
             <a href="#" class="logo">PriceCar</a>
-            <a href="tel:+4691235678" class="phoneTocall link-offset-1-hover">
+            <a href="tel:+4691235678" class="phoneTocall ">
                 <div class="phone_icon"></div>
                 <span>+49 (69) 1234-5678</span></a>
         </header>
         <main style="d-flex flex-column">
-            <div class="container first">
+            <div class="first">
                 <div class="info-wrapper">
                         <h1 class="title info-wrapper_child">Find out <span>how much</span> your <span>auto is worth</span> and an affordable loan <span>in 1 minute!</span></h1>
                         <div class="img-container info-wrapper_child">
                             <picture class="img-wrapper d-flex info-wrapper_child">
                                 <img src="./assets/img/img_car_grey.webp" srcset="assets/img/img_car_grey.webp" alt="grey car for sale">
-                                <span class="green-circle">VV Polo<br/>19 000 €</span>
+                                <div class="green-circle">
+                                    <span >VV Polo<br/>19 000 €</span>
+                                </div>
                             </picture>
                         </div>
                         <div class="form-wrapper info-wrapper_child">
-                            <form id="form" action="" method="post">
-                                <div class="form-group phone-line">
-                                    <label for="phone">Input your phone number</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1"></span>
-                                        </div>
+                            <form id="form" method="post">
+                                    <label class="input-group" for="phone">Input your phone number</label>
                                         <input type="text"
-                                               class="form-control"
+                                               required
+                                               class="form-control input-phone"
                                                name="phone"
                                                id="phone"
                                                placeholder="+49 (12) 1234-5678"
                                                aria-describedby="basic-addon1"
                                         >
-                                    </div>
-                                </div>
+                                    <label for="checkbox">
+                                        <input type="checkbox" id="checkbox" required/>
+                                        <span>
+                                            I accept  T o S - <a href="#">Terms of Service</a>
+                                        </span>
+                                    </label>
+<!--                                </div>-->
                                 <div class="form-group">
-                                    <input type="checkbox" id="checkbox" />
-                                    <label for="checkbox">I accept  T o S - <a href="#">Terms of Service</a></label>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-success">Get your price</button>
+                                    <button type="submit" class="btn btn-success" id="btnCheck" >Get your price</button>
                                 </div>
                             </form>
                         </div>
-
                 </div>
 
             </div>
-            <div class="d-flex row">
-                <div class="col-6 d-flex green-section">
+            <div class="d-flex row banner">
+                <div class="d-flex green-section">
                     <picture class="car_on_green">
                         <img src="./assets/img/img_car_white.webp" srcset="assets/img/img_car_white.webp" alt="white car for sale">
                     </picture>
                     <span>Sell<br/>auto</span>
                 </div>
-                <div class="col-6 black-section">
+                <div class="black-section">
                     <span>Loans<br/>against the<br/>PTS</span>
                     <picture>
                         <img src="./assets/img/img_doc.webp" srcset="assets/img/img_doc.webp" alt="documents for sale">
@@ -75,29 +73,29 @@
                     <h1>How we sell<br/>your car</h1>
                 </div>
                 <div class="d-flex row sell-wrapper">
-                    <div class="col-3 info-card">
-                        <div class="info-icon"></div>
+                    <div class="info-card">
+                        <div class="info-icon icon-1"></div>
                         <div class="info-text">
                             <h3 class="info-title">Lorem ipsum dolor sit amet consectetur.</h3>
                             <p class="info-subscription">Lorem ipsum dolor sit amet consectetur. Diam penatibus sit viverra dictum interdum. Turpis cras amet venenatis auctor ut. Urna dignissim a risus pellentesque faucibus leo ipsum.</p>
                         </div>
                     </div>
-                    <div class="col-3 info-card">
-                        <div class="info-icon"></div>
+                    <div class="info-card">
+                        <div class="info-icon icon-2 iconFir"></div>
                         <div class="info-text">
                             <h3 class="info-title">Lorem ipsum dolor sit amet consectetur.</h3>
                             <p class="info-subscription">Lorem ipsum dolor sit amet consectetur. Diam penatibus sit viverra dictum interdum. Turpis cras amet venenatis auctor ut. Urna dignissim a risus pellentesque faucibus leo ipsum.</p>
                         </div>
                     </div>
-                    <div class="col-3 info-card">
-                        <div class="info-icon"></div>
+                    <div class="info-card">
+                        <div class="info-icon icon-3"></div>
                         <div class="info-text">
                             <h3 class="info-title">Lorem ipsum dolor sit amet consectetur.</h3>
                             <p class="info-subscription">Lorem ipsum dolor sit amet consectetur. Diam penatibus sit viverra dictum interdum. Turpis cras amet venenatis auctor ut. Urna dignissim a risus pellentesque faucibus leo ipsum.</p>
                         </div>
                     </div>
-                    <div class="col-3 info-card">
-                        <div class="info-icon"></div>
+                    <div class="info-card">
+                        <div class="info-icon icon-4"></div>
                         <div class="info-text">
                             <h3 class="info-title">Lorem ipsum dolor sit amet consectetur.</h3>
                             <p class="info-subscription">Lorem ipsum dolor sit amet consectetur. Diam penatibus sit viverra dictum interdum. Turpis cras amet venenatis auctor ut. Urna dignissim a risus pellentesque faucibus leo ipsum.</p>
@@ -105,14 +103,13 @@
                     </div>
 
                 </div>
-                <div class="row btn-wrapper">
+                <div class="btn-wrapper">
                     <button type="submit" class="btn btn-success btn_no_margin">Get your price</button>
                 </div>
             </div>
         </main>
-        <footer class="footer container d-flex w-100">
+        <footer class="footer d-flex w-100">
                 <a href="#" class="logo">PriceCar</a>
-                <div class="logo"></div>
                 <div class="footerTextInfo">
                     <span class="text title">PriceCar.eu - The organization deals with car loans under title Privacy Policy User Agreement</span>
                     <div class="linkWrapper">
@@ -120,7 +117,7 @@
                         <a class="link-dark" target="_blank" href="#">User Agreement</a>
                     </div>
                 </div>
-                <div class="contact-info d-flex flex-column">
+                <div class="contact-info">
                     <a href="tel:+4691235678" class="phoneTocall link-offset-1">+49 (69) 1234-5678</a>
                     <div class="social-icons">
                         <a href="#" class="social-icon facebook"></a>
@@ -130,6 +127,7 @@
                 </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="./js/index.js"></script>
 </body>
